@@ -1,0 +1,175 @@
+<!--A website with a header, left-hand-side navbar, and footer -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R. Oliver Zanone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <!-- place a profile image in the header -->
+        <span><img src='images/profile.jpg'/><h2>R. Oliver Zanone</h2></span><br> rzanone@clemson.edu
+    </div>
+    <!-- Create a navbar that has collapsable items -->
+    <div class="navbar" id="navbar">
+        <a href="#aboutme">About Me</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#fun">Other Projects</a>
+    </div>
+    <!--About me section-->
+    <div id="aboutme">
+        <h2>About Me</h2>
+        <p>I am a graduate student obtaining my Masters with the Department of Electrical Engineering at the University of Clemson in South Carolina. 
+            I am currently working with Dr. Javad Velni with the complex systems and controls lab. 
+            My research interests include drone applications in agriculture, and learning based simulations.</p>
+    </div>
+    <!-- add a section for Research -->
+    <div id="research">
+        <h2>Current Research</h2>
+        Click for more information. 
+        <a href="http://www.google.com">
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/MultiAgentTrust.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Multi-Agent Model of Trust</h3>
+                <p>My most current work stemming from a single agent model of trust called OPTIMo. 
+                </p>
+            </div>
+        </div>
+        </a>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/DroneApproachCrop.jpg"/>
+            </div>
+            <div id="textCol">
+                <h3>Under Canopy Imaging via Drone</h3>
+                <p>My most current work stemming from a single agent model of trust called OPTIMo. 
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/RobotBaseShiftedLeftScaled.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Robot Base for Agriculture</h3>
+                <p>This was developed for a recent proposal for an agricultural project. 
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/Flywheel2.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Modern Control Lab Tool</h3>
+                <p>This was developed to aid in teaching a modern controls class. 
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/RemoteLabs2.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Sensors and Transducers Lab Tool</h3>
+                <p>This was developed to aid in teaching a sensors and transducers class. 
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="education">
+        <h2>Education</h2>
+        <div class="row">
+            <div class="column left">
+                <h3>Clemson University</h3>
+                <p>Master in Electrical Engineering with a focus on Intelligent Systems</p>
+                <p>Complex systems and controls Lab with Dr. Javad Velni</p>
+            </div>
+            <div class="column right">
+                <h3></h3>
+                <p></p>
+                <p>2022 - current</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column left">
+                <h3>University of Georgia</h3>
+                <p>Bachelors in Electrical Engineering</p>
+                <p>Certificate of Informatics</p>
+            </div>
+            <div class="column right">
+                <h3></h3>
+                <p></p>
+                <p>2018 - 2022</p>
+            </div>
+        </div>
+    </div>
+    <div id="fun">
+        <h2>Other Projects</h2>
+        <p>These are projects I work on my own time and not for any particular reason other than my own enjoyment.</p> 
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/VacuumReboot.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Vacuum Robot</h3>
+                <p>I have always wanted a roomba, so I built my own that is remote controlled and has sensors for autonomy. 
+                    I wanted to implement this other project I was working on in where a simulatin learned coverage control using reinforcement learning.
+                    View the page for more information.
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/PlateRobot.PNG"/>
+            </div>
+            <div id="textCol">
+                <h3>Plate Robot</h3>
+                <p>I wanted to test out a mechanical mechanism for suction, so I designed this robot to move plates around a table. 
+                    Shoutout to Rocky and August for helping come up with this idea. 
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <p>©<span id="year"></span> by R. Oliver Zanone |<img src="images/github.png"/><img src="images/scholar.png"/></p>
+    </div>
+</body>
+</html>
+<!-- add a script so that when you click the Education, Research, footer, the page scrolls to that-->
+<script>
+    function scrollTo(element) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop-50
+        });
+    }
+    document.getElementById('navbar').addEventListener('click', function (event) {
+        if (event.target.tagName.toLowerCase() === 'a') {
+            event.preventDefault();
+            scrollTo(document.getElementById(event.target.getAttribute('href').slice(1)));
+        }
+    });
+</script>
+<!-- Add a script that makes the navbar sticky -->
+<script>
+    window.onscroll = function() {stickyNav()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
