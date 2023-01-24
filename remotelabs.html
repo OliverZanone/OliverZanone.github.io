@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R. Oliver Zanone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="imageHeader">
+            <a href="https://oliverzanone.github.io"><img src='images/profile.jpg'/></a>
+        </div>
+        <div id="textHeader">
+            <h2>R. Oliver Zanone</h2>
+            rzanone@clemson.edu
+        </div>
+    </div>
+    <!-- Create a navbar that has collapsable items -->
+    <div class="navbar" id="navbar">
+        <a href="index.html#aboutme">About Me</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#fun">Other Projects</a>
+    </div>
+
+    <div id="main"> 
+        <p>
+        <a href="images/RemoteLabs2.png"><img src="images/RemoteLabs2.png", class="left"></a>
+        This project was a lab learning tool for teaching concepts found in a sensors and transducers class.
+        </p>
+        <p>
+            Todo: EXPAND.
+        </p>
+        <p>I contributed heavily to the design, construction, and performed all coding of the Arduinos and simulink apps of this lab setup.
+            This was during my time working under Dr. Mark Trudgen at the University of Georgia. 
+        This project was submitted to ASEE as a conference publication which can be found here: 
+        <a href="https://peer.asee.org/byoe-fabrication-implementation-and-design-of-a-remote-lab-setup-for-a-sensors-and-transducers-course", style="color: blue;">
+            https://peer.asee.org/byoe-fabrication-implementation-and-design-of-a-remote-lab-setup-for-a-sensors-and-transducers-course</a></p>
+        <div id="center"><a href="images/RemoteLabs1.jpg"><img src="images/RemoteLabs1.jpg", width="50%"></a></div>
+        <div id="center"><a href="images/RemoteLabsComputer.jpg"><img src="images/RemoteLabsComputer.jpg", width="50%"></a></div>
+        <div id="center"><a href="images/RemoteLabPCB.jpg"><img src="images/RemoteLabPCB.jpg", width="50%"></a></div>
+
+
+    </div>
+
+    <div id="footer">
+        <p>©<span id="year"></span> by R. Oliver Zanone |
+            <a href="https://github.com/OliverZanone"><img src="images/github.png"/></a>
+            <a href="https://scholar.google.com"><img src="images/scholar.png"/></a></p>
+    </div>
+</body>
+</html>
+<!-- Add a script that makes the navbar sticky -->
+<script>
+    window.onscroll = function() {stickyNav()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
