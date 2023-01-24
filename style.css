@@ -134,6 +134,10 @@ body {
     padding-top: 70px;
 }
 
+.sticky + #main {
+    padding-top: 70px;
+}
+
 .left {
     float: left;
     width: 300px;
