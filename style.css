@@ -43,7 +43,7 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 2% 2%;
+    padding: 14px 16px;
     text-decoration: none;
 }
 /* Change color on hover */
@@ -51,6 +51,12 @@ body {
     background-color: #ddd;
     color: black;
 
+}
+#main {
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: hidden;
 }
 #aboutme {
     margin: 10px;
@@ -95,6 +101,7 @@ body {
     margin-top: 20px;
 }
 #imageCol > img {
+    display: block;
     width: 330px;
     height: 255px;
 }
@@ -125,4 +132,16 @@ body {
 }
 .sticky + #aboutme {
     padding-top: 70px;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    height: 255px;
+    padding: 0 10px 0 0;
+}
+#center > a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
