@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R. Oliver Zanone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="imageHeader">
+            <a href="https://oliverzanone.github.io"><img src='images/profile.jpg'/></a>
+        </div>
+        <div id="textHeader">
+            <h2>R. Oliver Zanone</h2>
+            rzanone@clemson.edu
+        </div>
+    </div>
+    <!-- Create a navbar that has collapsable items -->
+    <div class="navbar" id="navbar">
+        <a href="index.html#aboutme">About Me</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#fun">Other Projects</a>
+    </div>
+
+    <div id="main"> 
+        <p>
+        <a href="images/DAC.png"><img src="images/DAC.png", class="left"></a>
+        This research was to study human lay targeting error. It was funded by the DEVCOM Analysis Center under the U.S. Army and we (the University of Georgia)
+        worked in conjunction with the University of Texas Arlington (<a href="https://utari.uta.edu/2022/07/13/utari-awarded-subcontract-from-university-of-georgia", style="color:blue">
+        more info here</a>). A snippet from that article: "For the last fifty years, the Army has been using the same models for human accuracy in aiming. DAC interest is in updating those models, but in such a way that they can be compared to the old models.   The project will also focus on being able to compare human performance to autonomous system performance in aiming.  As of now, the project is for two years to design the simulation system, run human subject studies and build the new accuracy models." 
+        I was tasked with building the simulation and did so using the UNREAL Engine. This project was then passed on after my time with UGA ended. See video below.
+        </p>
+        <div id="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/hgzzLDh7k5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+
+    </div>
+
+    <div id="footer">
+        <p>©<span id="year"></span> by R. Oliver Zanone |
+            <a href="https://github.com/OliverZanone"><img src="images/github.png"/></a>
+            <a href="https://scholar.google.com"><img src="images/scholar.png"/></a></p>
+    </div>
+</body>
+</html>
+<!-- Add a script that makes the navbar sticky -->
+<script>
+    window.onscroll = function() {stickyNav()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
