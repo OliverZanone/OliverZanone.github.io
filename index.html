@@ -34,27 +34,43 @@
         <h2>Current/Past Research</h2>
         Click for more information. 
         <a href="http://www.google.com">
+            <div id="container">
+                <div id="imageCol">
+                    <img src="images/UB_2.0_ArmTop.png"/>
+                </div>
+                <div id="textCol">
+                    <h3>Air/Ground Multi-Agent Collaboration in a Target Tracking Scenario</h3>
+                    <p>A drone acts as a central controller for a group of ground vehicles tracking a target.  
+                    </p>
+                </div>
+            </div>
+            </a>
+        <a href="http://www.google.com">
         <div id="container">
             <div id="imageCol">
                 <img src="images/MultiAgentTrust.png"/>
             </div>
             <div id="textCol">
                 <h3>Multi-Agent Model of Trust</h3>
-                <p>My most current work stemming from a single agent model of trust called OPTIMo. 
+                <p>This publication expands upon a single agent model of trust called OPTIMo and applies it to a multi-agent scenario.
+                    Our model uses the single-agent model to properly distribute the workload of a coverage problem to 
+                    then maximize the output of the multi-agent trust metric.   
                 </p>
             </div>
         </div>
         </a>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2405896322027677">
         <div id="container">
             <div id="imageCol">
                 <img src="images/DroneApproachCrop.jpg"/>
             </div>
             <div id="textCol">
                 <h3>Under Canopy Imaging via Drone</h3>
-                <p>My most current work stemming from a single agent model of trust called OPTIMo. 
+                <p>In this work we look to perform onboard image analysis to detect diseases by lowering a camera into the foilage of plants.  
                 </p>
             </div>
         </div>
+        </a>
         <div id="container">
             <div id="imageCol">
                 <img src="images/RobotBaseShiftedLeftScaled.png"/>
@@ -132,7 +148,18 @@
     </div>
     <div id="fun">
         <h2>Other Projects</h2>
-        <p>These are projects I work on my own time and not for any particular reason other than my own enjoyment.</p> 
+        <p>These are some projects I work on my own time. Some were used for class projects and some are for no particular reason other than my own enjoyment.</p> 
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/CoverageSim.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Multi-Agent Reinforcement Learning Overview,
+                    Applications, and Problem Proposal</h3>
+                <p> This is an area I am interested in and therefore turned my curiosity into a class paper. 
+                </p>
+            </div>
+        </div>
         <div id="container">
             <div id="imageCol">
                 <img src="images/VacuumReboot.png"/>
@@ -141,7 +168,6 @@
                 <h3>Vacuum Robot</h3>
                 <p>I have always wanted a roomba, so I built my own that is remote controlled and has sensors for autonomy. 
                     I wanted to implement another project where a simulation learned coverage control using reinforcement learning.
-                    View the page for more information.
                 </p>
             </div>
         </div>
@@ -156,15 +182,68 @@
                 </p>
             </div>
         </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/CupCleaner.png"/>
+            </div>
+            <div id="textCol">
+                <h3>Cup Cleaner</h3>
+                <p>This robot helps you clean cups by clamping a rag around it. 
+                    Shoutout to Shivani for helping come up with this idea. 
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/PickandPlace.PNG"/>
+            </div>
+            <div id="textCol">
+                <h3>Pick and Place Based on Fiducial Tags</h3>
+                <p>This robot can pick up canned food using Aruco tag for detecting the item and suction to move it to a designated place. 
+                    Shoutout to Matt and Rocky for helping with this project.  
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/DisassemblyStation.jpg"/>
+            </div>
+            <div id="textCol">
+                <h3>Design and Construction of a Disassembly Station for the UGA Innovation Factory</h3>
+                <p>https://engineering.uga.edu/capstone-showcase-2022/design-and-construction-of-disassembly-station-for-the-uga-innovation-facto
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="imageCol">
+                <img src="images/SPXBuild.jpg"/>
+            </div>
+            <div id="textCol">
+                <h3>Engine Work</h3>
+                <p>Some of my car/jetski restoration projects.
+                </p>
+            </div>
+        </div>
 
     </div>
-    <div id="footer">
-        <p>©<span id="year"></span> by R. Oliver Zanone |
-            <a href="https://github.com/OliverZanone"><img src="images/github.png"/></a>
-            <a href="https://scholar.google.com"><img src="images/scholar.png"/></a></p>
-    </div>
+    <div id="footer"></div>
+    <div id="footer-placeholder"></div>
+    test
 </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+        var currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear;
+      });
+  });
+</script>
+
 <!-- add a script so that when you click the Education, Research, footer, the page scrolls to that-->
 <script>
     function scrollTo(element) {
