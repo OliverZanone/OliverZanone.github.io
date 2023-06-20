@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R. Oliver Zanone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="imageHeader">
+            <a href="https://oliverzanone.github.io"><img src='images/profile.jpg'/></a>
+        </div>
+        <div id="textHeader">
+            <h2>R. Oliver Zanone</h2>
+            rzanone@clemson.edu
+        </div>
+    </div>
+    <!-- Create a navbar that has collapsable items -->
+    <div class="navbar" id="navbar">
+        <a href="index.html#aboutme">About Me</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#fun">Other Projects</a>
+    </div>
+
+    <div id="main"> 
+        <p>
+        <a href="images/DAC.png"><img src="images/PickandPlace.PNG", class="left"></a>
+        This was a fun project were we were tasked with creating something to move objects around. We had three weeks to complete this project. See video below.
+        </p>
+        <div id="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZaSjzlngK8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        var currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear;
+      });
+  });
+</script>
+
+<!-- Add a script that makes the navbar sticky -->
+<script>
+    window.onscroll = function() {stickyNav()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+</script>
