@@ -146,10 +146,16 @@ body {
 }
 #center {
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 #center > a{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 #center > iframe {
@@ -157,4 +163,28 @@ body {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.image-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+img {
+    max-height: 400px; /* Set the desired height */
+    max-width: 100%; /* Ensure the images don't exceed their container width */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+}
+
+.caption {
+    margin-top: 10px; /* Adjust the spacing between the image and caption */
 }
