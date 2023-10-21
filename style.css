@@ -100,12 +100,20 @@ body {
     background-color: #f0f0f0;
     margin-top: 20px;
 }
-#imageCol > img {
-    display: block;
-    width: 330px;
+
+#imageCol {
+    flex: 0 0 330px; /* Set a fixed width for the image column */
     height: 255px;
 }
+
+#imageCol > img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+}
+
 #textCol {
+    flex: 1; /* Allow the text column to grow and take up the remaining space */
     padding: 20px;
     text-align: left;
 }
