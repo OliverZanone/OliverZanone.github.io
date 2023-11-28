@@ -82,12 +82,10 @@ body {
 .column {
     flex: 50%;
 }
-.left {
-    text-align: left;
-}
+
 .right {
     text-align: right;
-    align-self: flex-end;
+    /* align-self: flex-end; this puts text at bottom, but I think I like it at the top */
 }
 
 #fun {
@@ -158,7 +156,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto; 
 }
 #center > a{
     display: flex;
